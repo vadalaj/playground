@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1602073623FDC76000525EAD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1602073523FDC76000525EAD /* SnapKit */; };
 		166DFEB223FDB05B0090EFDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DFEB123FDB05B0090EFDD /* AppDelegate.swift */; };
 		166DFEB423FDB05B0090EFDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DFEB323FDB05B0090EFDD /* SceneDelegate.swift */; };
 		166DFEB623FDB05B0090EFDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DFEB523FDB05B0090EFDD /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 		166DFEBE23FDB05C0090EFDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 166DFEBC23FDB05C0090EFDD /* LaunchScreen.storyboard */; };
 		166DFEC723FDB18B0090EFDD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DFEC623FDB18B0090EFDD /* TableViewController.swift */; };
 		166DFECA23FDB2EE0090EFDD /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DFEC923FDB2EE0090EFDD /* Forecast.swift */; };
+		166DFECE23FDC4AA0090EFDD /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DFECD23FDC4AA0090EFDD /* ForecastCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		166DFEBF23FDB05C0090EFDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		166DFEC623FDB18B0090EFDD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		166DFEC923FDB2EE0090EFDD /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		166DFECD23FDC4AA0090EFDD /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1602073623FDC76000525EAD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +64,7 @@
 		166DFEB023FDB05B0090EFDD /* playground */ = {
 			isa = PBXGroup;
 			children = (
+				166DFECB23FDC46A0090EFDD /* Views */,
 				166DFEC823FDB2CC0090EFDD /* Models */,
 				166DFEC523FDB16C0090EFDD /* View Controllers */,
 				166DFEB123FDB05B0090EFDD /* AppDelegate.swift */,
@@ -89,6 +94,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		166DFECB23FDC46A0090EFDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				166DFECC23FDC4740090EFDD /* Table View Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		166DFECC23FDC4740090EFDD /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				166DFECD23FDC4AA0090EFDD /* ForecastCell.swift */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +126,9 @@
 			dependencies = (
 			);
 			name = playground;
+			packageProductDependencies = (
+				1602073523FDC76000525EAD /* SnapKit */,
+			);
 			productName = playground;
 			productReference = 166DFEAE23FDB05B0090EFDD /* playground.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 166DFEA523FDB05B0090EFDD;
+			packageReferences = (
+				1602073423FDC76000525EAD /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 166DFEAF23FDB05B0090EFDD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -164,6 +191,7 @@
 				166DFEB223FDB05B0090EFDD /* AppDelegate.swift in Sources */,
 				166DFEB423FDB05B0090EFDD /* SceneDelegate.swift in Sources */,
 				166DFEC723FDB18B0090EFDD /* TableViewController.swift in Sources */,
+				166DFECE23FDC4AA0090EFDD /* ForecastCell.swift in Sources */,
 				166DFECA23FDB2EE0090EFDD /* Forecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1602073423FDC76000525EAD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1602073523FDC76000525EAD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1602073423FDC76000525EAD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 166DFEA623FDB05B0090EFDD /* Project object */;
 }

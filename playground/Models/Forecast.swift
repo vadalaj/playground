@@ -9,6 +9,7 @@
 import Foundation
 
 struct Forecast {
+    var day: Int = 0
     var highTemperature: Int = 0
     var lowTemperature: Int = 0
     var shortDescription: String = ""
@@ -16,13 +17,13 @@ struct Forecast {
 }
 
 extension Forecast {
-    static var forecasts = [["icon":"☀️", "shortDescription":"Sunny"], ["icon":"🌤", "shortDescription":"Mostly Sunny"], ["icon":"🌥", "shortDescription":"Partly Cloudy"], ["icon":"☁️", "shortDescription":"Cloudy"]
+    static var forecasts = [["icon":"☀️", "shortDescription":"Sunny"], ["icon":"🌤", "shortDescription":"Mostly Sunny"], ["icon":"🌥", "shortDescription":"Partly Cloudy"], ["icon":"☁️", "shortDescription":"Cloudy"]]
     
     static func currentForecast() -> [Forecast] {
         
-        return (1...7).map { _ in
+        return (1...7).map { day in
             let randomForecast = Forecast.forecasts.randomElement()!
-            return Forecast(highTemperature: Int.random(in: 65..<75), lowTemperature: Int.random(in: 55..<64), shortDescription: randomForecast["shortDescription"] ?? "no forecast", icon: randomForecast["icon"] ?? "❓")
+            return Forecast(day: day, highTemperature: Int.random(in: 65..<75), lowTemperature: Int.random(in: 55..<64), shortDescription: randomForecast["shortDescription"] ?? "no forecast", icon: randomForecast["icon"] ?? "❓")
         }
     }
 }
