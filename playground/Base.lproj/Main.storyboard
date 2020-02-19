@@ -74,9 +74,12 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mX-cd-POV">
-                                            <rect key="frame" x="64" y="48" width="135" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="64" y="48" width="106.5" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="R9Z-hB-sM2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVt-8v-VG5">
@@ -98,6 +101,12 @@
                                         <constraint firstItem="XuB-9C-xIg" firstAttribute="bottom" secondItem="8Bw-Fn-3IK" secondAttribute="bottomMargin" id="inr-S9-QzJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dayNumber" destination="jVt-8v-VG5" id="Ekd-Yu-HOn"/>
+                                    <outlet property="iconLabel" destination="XuB-9C-xIg" id="TPH-jr-Cto"/>
+                                    <outlet property="shortDescriptionLabel" destination="8mX-cd-POV" id="eI1-8J-nVe"/>
+                                    <outlet property="temperatureLabel" destination="jvP-WM-Q2a" id="yt9-W9-tK3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
