@@ -22,7 +22,6 @@ extension Forecast {
     //static var longForecasts = [["icon":"☀️", "shortDescription":"Sunny, with a long description that bounces to two lines and makes the table view layout quite a bit longer, maybe even growing to three lines?"], ["icon":"🌤", "shortDescription":"Mostly Sunny"], ["icon":"🌥", "shortDescription":"Sunny, but only a little - mostly clouds on this particular day, not a good day for a tan."], ["icon":"☁️", "shortDescription":"Cloudy"]]
     
     static func currentForecast() -> [Forecast] {
-        
         return (1...7).map { day in
             let randomForecast = Forecast.forecasts.randomElement()!
             return Forecast(day: day, highTemperature: Int.random(in: 65..<75), lowTemperature: Int.random(in: 55..<64), shortDescription: randomForecast["shortDescription"] ?? "no forecast", icon: randomForecast["icon"] ?? "❓")

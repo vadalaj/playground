@@ -9,17 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    @IBOutlet var forecastButton: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        forecastButton?.addTarget(self, action: #selector(showForecast), for: .touchUpInside)
+        
         // Do any additional setup after loading the view.
-    }
-
-    @IBAction func showForecast() {
-        self.performSegue(withIdentifier: "showForecast", sender: self)
     }
 
 }
